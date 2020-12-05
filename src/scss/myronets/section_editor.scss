@@ -1,0 +1,103 @@
+
+.editor{
+  @include MonReg(10px,$textColorD);
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+
+  &_button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+    color: $textColorW;
+    font-weight: bold;
+    background-color: $lightLilac;
+    padding: 1.15em 2.3em;
+    border-radius: 2em;
+    margin-top: -50%;
+    border: 1px solid $lightLilac;
+    &:hover {
+      background-color: #fff;
+      color: $lightLilac;
+    }
+  }
+  &_button-text {
+    font-size: 14px;
+    margin: 10px 0 50px 0;
+    color: $textColorG;
+  }
+  &_header {
+    @include MonBold(1.9em,$headerColor);
+    text-transform: uppercase;
+  }
+  &_text {
+    @include MProReg(20px,$textColorD);
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin: 2em 1em;
+  }
+  &_actions {
+    list-style: none;
+    @include makeFlexCenter;
+    flex-wrap: wrap;
+      &_item {
+        color: #24292e;
+        font-size: 11px;
+        @include makeFlexCenter;
+        margin: 1em 10px 0 0;
+        &_btn {
+          font-size: 12px;
+          line-height: 20px;
+          padding: 3px 10px;
+          border-radius: .25em 0 0 .25em;
+          background-color: #eff3f6;
+          background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+          color: #24292e;
+          border: 1px solid rgba(27,31,35,.2);
+          cursor: pointer;
+          @include makeFlexCenter;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+          }
+        }
+        &_count {
+          border: 1px solid rgba(27,31,35,.2);
+          border-bottom-right-radius: 3px;
+          border-top-right-radius: 3px;
+          border-left: 0;
+          color: #24292e;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 20px;
+          padding: 3px 10px;
+          text-decoration: none;
+          &:hover {
+            color: #0366d6;
+          }
+        }
+      }
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .editor {
+    font-size: 18px;
+    &_button{
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .editor {
+    font-size: 26px;
+    &_button{
+      font-size: 0.8em;
+    }
+  }
+}
+

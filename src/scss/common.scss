@@ -1,0 +1,17 @@
+@import "reset.css";
+@import "variable";
+@import "fonts";
+@import "morozov/header_320";
+@import "morozov/people";
+@import "myronets/section_editor";
+@import "myronets/section_here";
+@import "myronets/section_price";
+
+.main_container{
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 320px;
+  padding: 0 10px;
+
+}
+

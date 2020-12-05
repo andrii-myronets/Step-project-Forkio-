@@ -1,0 +1,220 @@
+.header{
+  background: url("../img/header_backimg.png") no-repeat center top;
+  height: 720px;
+
+  &_menu{
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    height: 103px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: $colorMenuBGC;
+
+    &_logo{
+
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        span {
+          display: none;
+          text-transform: uppercase;
+          @include LatoReg(24px, $lightLilac);
+        }
+
+      }
+
+    }
+
+    &_btn{
+      text-align: center;
+      line-height: 40px;
+
+      &_item{
+        display: block;
+        width: 119px;
+        height: 37px;
+        border-radius: 15px;
+        @include MonBold(16px, $textColorW);
+        background-color: $lightLilac;
+        text-decoration: none;
+        &:hover {
+          background-color: #fff;
+          color: $lightLilac;
+        }
+      }
+    }
+
+    &_call{
+      text-align: right;
+    }
+
+    &_links{
+      display: none;
+      position: absolute;
+      z-index: 100;
+      flex-basis: 100%;
+      width: calc(100% - 20px);
+      top: 103px;
+      color:#FFFFFF;
+      text-align:left;
+
+      &_item{
+        position: relative;
+        flex-basis: 100%;
+        height: 90px;
+        text-decoration: none;
+        border-bottom: 1px solid #3b3b3b;
+        background-color: #333333;
+        line-height: 90px;
+        padding-left: 30px;
+        @include MonReg(19px);
+      }
+
+      &_item:hover{
+        color:$lightLilac;
+      }
+
+      &_item:hover:before{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        content: "";
+        display: block;
+        width: 4px;
+        height: 60%;
+        background-color: $lightLilac;
+      }
+
+      &_enable{
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+  }
+
+  &_text1{
+    display: block;
+    width: 225px;
+    margin: 50px auto 0 auto;
+    @include MonBold(35px, $textColorW);
+    text-align: center;
+  }
+
+  &_text2{
+    display: block;
+    width: 240px;
+    margin: 30px auto 0 auto;
+    @include MonReg(13px , $lightLilac);
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &_text3{
+    display: block;
+    width: 227px;
+    margin: 30px auto 0 auto;
+    @include MonReg(12px, #848E97);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .header{
+
+    &_menu{
+      justify-content: space-between;
+
+      &_logo{
+
+        a {
+          span{
+            display: block;
+          }
+        }
+      }
+
+      &_call{
+        display: none;
+      }
+
+      &_links{
+        display: flex;
+        position: static;
+        flex-basis: 100%;
+        width: auto;
+
+        &_item{
+          padding: 0;
+          height: auto;
+          background-color: transparent;
+          border: none;
+          text-align: center;
+          line-height: 100%;
+          font-size: 16px;
+        }
+        &_item:hover:before{
+          display: none;
+        }
+        &_enable{
+          flex-wrap: nowrap;
+        }
+      }
+    }
+    &_text1{
+      font-size: 52px;
+      width: auto;
+    }
+
+    &_text2{
+      font-size: 17px;
+      width: auto;
+    }
+
+    &_text3{
+      width: auto;
+    }
+  }
+
+}
+
+@media screen and (min-width: 993px) {
+  .header{
+
+    &_menu{
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      &_logo{
+        order: -1;
+      }
+
+      &_btn{
+        order: 1;
+      }
+
+      &_call{
+        display: none;
+      }
+
+      &_links{
+        display: flex;
+        position: static;
+        flex-basis: auto;
+        order: -1;
+
+        &_item{
+          padding: 0;
+          flex-basis: auto;
+          background-color: transparent;
+          border: none;
+          text-align: center;
+          margin: 0 10px ;
+        }
+      }
+    }
+  }
+}

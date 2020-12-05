@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'MonBold';
+  src: url("../../dist/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'MonReg';
+  src: url("../../dist/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'LatoBold';
+  src: url("../../dist/fonts/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'LatoBoldItalic';
+  src: url("../../dist/fonts/Lato-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: 'LatoReg';
+  src: url("../../dist/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'MProReg';
+  src: url("../../dist/fonts/MyriadPro-Regular.ttf");
+}
+
+@mixin MonBold($size: 24px, $color: #ffffff){
+  font-family: MonBold,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+@mixin MonReg($size: 24px, $color: #ffffff){
+  font-family: MonReg,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+@mixin LatoBold($size: 24px, $color: #ffffff){
+  font-family: LatoBold,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+@mixin LatoBoldItalic($size: 24px, $color: #ffffff){
+  font-family: LatoBoldItalic,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+@mixin LatoReg($size: 24px, $color: #ffffff){
+  font-family: LatoReg,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+@mixin MProReg($size: 24px, $color: #ffffff){
+  font-family: MProReg,  ﻿Courier, sans-serif;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin makeFlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

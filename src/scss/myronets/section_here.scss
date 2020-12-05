@@ -1,0 +1,92 @@
+
+.desktop {
+  display: none;
+}
+
+.here {
+  @include MonReg(12px,$lightLilac);
+  background-color: #f4f4f4;
+  text-align: center;
+  &_header {
+    @include MonBold(24px,$lightLilac);
+    padding: 34px 70px;
+  }
+  &_list {
+    @include makeFlexCenter;
+    flex-direction: column;
+    &_item {
+      &_img {
+        width: 120px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      &_disc {
+        padding: 20px;
+        &_header {
+          margin-bottom: 20px;
+          color: #323232;
+          font-size: 12px;
+        }
+        &_text {
+          font-size: 10px;
+          color: #848E97;
+          line-height: 16px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+  &_example {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .here {
+    &_header {
+      font-size: 36px;
+    }
+    &_list {
+      text-align: left;
+      &_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        &_disc {
+          flex-basis: 80%;
+          &_header {
+            font-size: 18px;
+          }
+          &_text {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 993px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+    height: 100%;
+  }
+  .here {
+    display: flex;
+    &_header {
+      font-size: 35px;
+    }
+    &_list {
+      padding: 0 0 0 40px;
+    }
+    &_example {
+      flex-basis: 140%;
+    }
+  }
+}

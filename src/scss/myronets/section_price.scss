@@ -1,0 +1,129 @@
+
+.price {
+  @include MonReg(20px,$textColorW);
+  background-color: $darkLilac;
+  text-align: center;
+  padding-bottom: 50px;
+  &_header {
+    @include MonBold(26px,$textColorW);
+    padding: 50px;
+  }
+  &_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    &_item {
+      width: 257px;
+      background-color: rgba(95, 81, 97, 0.7);
+      margin: 21px;
+      &_header {
+        text-transform: uppercase;
+        font-size: 17px;
+        padding: 40px 0 30px 0;
+        background-color: rgba(104, 91, 106, 0.7);
+
+      }
+      &_price {
+        @include MonBold(48px,$textColorW);
+        padding: 20px;
+      }
+      &_period {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #d4d1d5;
+        position: relative;
+      }
+      &_text {
+        font-size: 16px;
+        padding: 70px 0 20px 0;
+        line-height: 28px;
+        &_br {
+          display: block;
+        }
+      }
+      &_btn {
+        display: block;
+        width: 160px;
+        padding: 15px;
+        text-transform: uppercase;
+        background-color: #776b79;
+        border-radius: 25px;
+        color: $textColorW;
+        text-decoration: none;
+        margin: 35px auto;
+        &:hover {
+          background-color: #d0cbd0;
+          color: #7f6d78;
+        }
+      }
+    }
+  }
+}
+.bigger {
+  width: 299px;
+  background-color:rgba(65, 51, 68, 0.7);
+  margin: 0;
+  &_header {
+    background-color: rgba(58, 45, 61, 0.7);
+  }
+  &_price {
+    @include MonBold(64px,$textColorW);
+  }
+  &_text {
+    font-size: 16px;
+    padding: 110px 0 64px 0;
+    line-height: 28px;
+  }
+  &_btn {
+    background-color: #5d5160;
+    &:hover {
+      background-color: #d0cbd0;
+      color: #7f6d78;
+    }
+  }
+}
+.price_list_item_period::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: $lightLilac;
+  position: relative;
+  top: 50px;
+  left: 8px;
+}
+.student_text{
+  padding-bottom: 47px;
+}
+
+@media screen and (min-width: 481px) {
+  .price {
+    &_header {
+      font-size: 36px;
+    }
+    background-image: url("../img/bg_price.png");
+    background-size: cover;
+
+    &_list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .price {
+    &_list {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      &_item {
+        margin: 0;
+      }
+    }
+  }
+
+}

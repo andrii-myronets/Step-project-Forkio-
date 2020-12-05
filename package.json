@@ -1,0 +1,34 @@
+{
+  "name": "sproject2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/orion.odessa.m/stepproject2_myronets_morozov.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/orion.odessa.m/stepproject2_myronets_morozov/issues"
+  },
+  "homepage": "https://gitlab.com/orion.odessa.m/stepproject2_myronets_morozov#readme",
+  "description": ""
+}
